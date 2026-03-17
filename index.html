@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>FUTURO DEL DINERO CON LA IA</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+
+<header>
+
+<h1>FUTURO DEL DINERO CON LA IA</h1>
+
+</header>
+
+<div class="app">
+
+<div class="panel">
+
+<h2>Simulador de ahorro</h2>
+
+<label>Ingresos mensuales</label>
+<input type="number" id="ingresos">
+
+<label>Gastos mensuales</label>
+<input type="number" id="gastos">
+
+<label>Selecciona tu meta</label>
+
+<select id="meta" onchange="cambiarImagen()">
+
+<option value="viaje">Viaje</option>
+<option value="casa">Casa</option>
+<option value="carro">Carro</option>
+<option value="moto">Moto</option>
+<option value="universidad">Universidad</option>
+<option value="negocio">Negocio</option>
+<option value="computador">Computador</option>
+<option value="celular">Celular</option>
+<option value="inversion">Inversión</option>
+<option value="vacaciones">Vacaciones</option>
+<option value="mudanza">Mudanza</option>
+<option value="boda">Boda</option>
+<option value="gaming">Setup gamer</option>
+<option value="cursoIA">Curso IA</option>
+<option value="ahorro">Fondo ahorro</option>
+
+</select>
+
+<label>Costo de tu meta</label>
+
+<input type="number" id="costo">
+
+<button onclick="calcular()">Calcular plan</button>
+
+</div>
+
+<div class="panel resultado">
+
+<img id="imagenMeta">
+
+<h2 id="resultado"></h2>
+
+<div class="barra">
+
+<div id="progreso"></div>
+
+</div>
+
+<canvas id="grafico"></canvas>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
